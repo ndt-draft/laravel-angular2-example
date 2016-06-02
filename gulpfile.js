@@ -1,5 +1,7 @@
 var elixir = require('laravel-elixir');
 
+require('elixir-typescript');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -11,6 +13,27 @@ var elixir = require('laravel-elixir');
  |
  */
 
+var typescriptOptions = {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false
+};
+
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.copy( 'node_modules/core-js', 'public/plugins/core-js' );
+    mix.copy( 'node_modules/@angular', 'public/plugins/@angular' );
+    mix.copy( 'node_modules/angular2-in-memory-web-api', 'public/plugins/angular2-in-memory-web-api' );
+    mix.copy( 'node_modules/rxjs', 'public/plugins/rxjs' );
+    mix.copy( 'node_modules/reflect-metadata', 'public/plugins/reflect-metadata' );
+    mix.copy( 'node_modules/zone.js/', 'public/plugins/zone.js/' );
+    mix.copy( 'node_modules/systemjs', 'public/plugins/systemjs' );
+    mix.copy( 'resources/assets/js/systemjs.config.js', 'public/js' );
+
+    mix.typescript( 'app.component.js', 'public/app', '/**/app.component.ts', typescriptOptions );
+    mix.typescript( 'main.js', 'public/app', '/**/main.ts', typescriptOptions );
 });
