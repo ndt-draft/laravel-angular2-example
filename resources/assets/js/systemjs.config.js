@@ -8,13 +8,17 @@
     'app':                        'app', // 'dist',
     '@angular':                   'plugins/@angular',
     'angular2-in-memory-web-api': 'plugins/angular2-in-memory-web-api',
-    'rxjs':                       'plugins/rxjs'
+    'rxjs':                       'plugins/rxjs',
+    'jquery':                     'plugins/jquery/dist',
+    'custom-app':                  'js',
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { defaultExtension: 'js' },
+    'jquery':                     { main: 'jquery.js', defaultExtension: 'js' },
+    'custom-app':                  { main: 'app.js', defaultExtension: 'js' },
   };
   var ngPackageNames = [
     'common',

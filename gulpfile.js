@@ -32,8 +32,17 @@ elixir(function(mix) {
     mix.copy( 'node_modules/reflect-metadata', 'public/plugins/reflect-metadata' );
     mix.copy( 'node_modules/zone.js/', 'public/plugins/zone.js/' );
     mix.copy( 'node_modules/systemjs', 'public/plugins/systemjs' );
+
+    mix.copy( 'bower_components', 'public/plugins' );
+
     mix.copy( 'resources/assets/js/systemjs.config.js', 'public/js' );
 
+    mix.scripts( [
+        'resources/assets/js/app.js',
+        'resources/assets/js/layout.js'
+    ], 'public/js/app.js', './' );
+
     mix.typescript( 'app.component.js', 'public/app', '/**/app.component.ts', typescriptOptions );
+    mix.typescript( 'myNgInclude.component.js', 'public/app', '/**/myNgInclude.component.ts', typescriptOptions );
     mix.typescript( 'main.js', 'public/app', '/**/main.ts', typescriptOptions );
 });

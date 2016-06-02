@@ -42,18 +42,15 @@
         <script src="plugins/zone.js/dist/zone.js"></script>
         <script src="plugins/reflect-metadata/Reflect.js"></script>
         <script src="plugins/systemjs/dist/system.src.js"></script>
-        <!-- 2. Configure SystemJS -->
+        <!-- 2. Configure SystemJS and existing js -->
         <script src="js/systemjs.config.js"></script>
         <script>
+            System.import('jquery').catch(function(err){ console.error(err); });
+            System.import('custom-app').catch(function(err){ console.error(err); });
             System.import('app').catch(function(err){ console.error(err); });
         </script>
     </head>
     <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-                <my-app>Loading...</my-app>
-            </div>
-        </div>
+        <my-app></my-app>
     </body>
 </html>

@@ -1,6 +1,16 @@
 import { Component } from '@angular/core';
+
+import { MyNgInclude } from './myNgInclude.component';
+
+declare var App: any;
+declare var Layout: any;
+
 @Component({
   selector: 'my-app',
-  template: '<h1>My First Angular 2 App</h1>'
+  templateUrl: 'partials/app.html',
+  directives: [MyNgInclude]
 })
 export class AppComponent { }
+
+App.initHeader();
+Layout.initBaseLayout();
