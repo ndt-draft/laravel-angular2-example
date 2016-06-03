@@ -32,6 +32,7 @@ elixir(function(mix) {
     mix.copy( 'node_modules/reflect-metadata', 'public/plugins/reflect-metadata' );
     mix.copy( 'node_modules/zone.js/', 'public/plugins/zone.js/' );
     mix.copy( 'node_modules/systemjs', 'public/plugins/systemjs' );
+    mix.copy( 'node_modules/systemjs-plugin-css', 'public/plugins/systemjs-plugin-css' );
 
     mix.copy( 'bower_components', 'public/plugins' );
 

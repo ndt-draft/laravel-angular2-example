@@ -1,5 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { Component } from '@angular/core';
 
 import { MyNgInclude } from './myNgInclude.component';
 
@@ -9,9 +8,9 @@ declare var App: any;
 declare var Layout: any;
 
 @Component({
-  selector: 'body',
-  templateUrl: 'partials/app.html',
-  directives: [MyNgInclude, Dashboard]
+    selector: 'body',
+    templateUrl: 'partials/app.html',
+    directives: [MyNgInclude, Dashboard]
 })
 export class AppComponent { }
 
