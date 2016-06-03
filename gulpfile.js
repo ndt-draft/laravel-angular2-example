@@ -44,5 +44,6 @@ elixir(function(mix) {
 
     mix.typescript( 'app.component.js', 'public/app', '/**/app.component.ts', typescriptOptions );
     mix.typescript( 'myNgInclude.component.js', 'public/app', '/**/myNgInclude.component.ts', typescriptOptions );
+    mix.typescript( 'dashboard.js', 'public/app', '/**/dashboard.ts', typescriptOptions );
     mix.typescript( 'main.js', 'public/app', '/**/main.ts', typescriptOptions );
 });

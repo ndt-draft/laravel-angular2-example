@@ -4,6 +4,9 @@ var Layout = function () {
     };
 
     return {
+        initBody: function () {
+            console.log($('body'));
+        },
         initBaseLayout: function () {
             handleBaseLayout();
         },

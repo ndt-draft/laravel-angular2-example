@@ -51,6 +51,6 @@
         </script>
     </head>
     <body>
-        <my-app></my-app>
+        <my-app>Loading...</my-app>
     </body>
 </html>

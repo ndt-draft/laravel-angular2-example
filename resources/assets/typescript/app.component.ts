@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 import { MyNgInclude } from './myNgInclude.component';
+
+import { Dashboard } from './dashboard';
 
 declare var App: any;
 declare var Layout: any;
 
 @Component({
-  selector: 'my-app',
+  selector: 'body',
   templateUrl: 'partials/app.html',
-  directives: [MyNgInclude]
+  directives: [MyNgInclude, Dashboard]
 })
 export class AppComponent { }
 
 App.initHeader();
+Layout.initBody();
 Layout.initBaseLayout();
