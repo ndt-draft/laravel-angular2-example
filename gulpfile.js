@@ -55,8 +55,9 @@ elixir(function(mix) {
         'resources/assets/js/layout.js'
     ], 'public/js/app.js', './' );
 
-    mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist1/main.js', typescriptOptions[0] );
-    mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist2/main.js', typescriptOptions[1] );
-    // comment out concat of elixir-typescript, uncomment this line
-    // mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist3/main.js', typescriptOptions[0] );
+    // mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist1/main.js', typescriptOptions[0] );
+    // comment out concat of elixir-typescript, uncomment this line and comment the line above
+    mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist2/main.js', typescriptOptions[0] );
+
+    // mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist3/main.js', typescriptOptions[1] );
 });
