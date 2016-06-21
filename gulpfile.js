@@ -13,16 +13,29 @@ require('elixir-typescript');
  |
  */
 
-var typescriptOptions = {
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false
-};
+var typescriptOptions = [
+    {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": false
+    },
+    {
+        "target": "es5",
+        "module": "system",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "outFile": "main.js"
+    }
+];
 
 elixir(function(mix) {
     mix.copy( 'node_modules/core-js', 'public/plugins/core-js' );
@@ -32,7 +45,6 @@ elixir(function(mix) {
     mix.copy( 'node_modules/reflect-metadata', 'public/plugins/reflect-metadata' );
     mix.copy( 'node_modules/zone.js/', 'public/plugins/zone.js/' );
     mix.copy( 'node_modules/systemjs', 'public/plugins/systemjs' );
-    mix.copy( 'node_modules/systemjs-plugin-css', 'public/plugins/systemjs-plugin-css' );
 
     mix.copy( 'bower_components', 'public/plugins' );
 
@@ -43,8 +55,8 @@ elixir(function(mix) {
         'resources/assets/js/layout.js'
     ], 'public/js/app.js', './' );
 
-    mix.typescript( 'app.component.js', 'public/app', '/**/app.component.ts', typescriptOptions );
-    mix.typescript( 'myNgInclude.component.js', 'public/app', '/**/myNgInclude.component.ts', typescriptOptions );
-    mix.typescript( 'dashboard.js', 'public/app', '/**/dashboard.ts', typescriptOptions );
-    mix.typescript( 'main.js', 'public/app', '/**/main.ts', typescriptOptions );
+    mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist1/main.js', typescriptOptions[0] );
+    mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist2/main.js', typescriptOptions[1] );
+    // comment out concat of elixir-typescript, uncomment this line
+    // mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist3/main.js', typescriptOptions[0] );
 });
