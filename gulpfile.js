@@ -59,5 +59,5 @@ elixir(function(mix) {
     // comment out concat of elixir-typescript, uncomment this line and comment the line above
     // mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist2/main.js', typescriptOptions[0] );
 
-    // mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist3/main.js', typescriptOptions[1] );
+    mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist3/main.js', typescriptOptions[1] );
 });
