@@ -23,7 +23,7 @@ export class MyNgInclude implements OnInit {
             .then((factory: any) => this.contentTarget.createComponent(factory));
     }
 
-    createContentComponent(templateUrl) {
+    createContentComponent(templateUrl: any) {
         @Component({
             selector: 'my-ng-include-content',
             templateUrl: templateUrl,

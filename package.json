@@ -2,6 +2,8 @@
   "private": true,
   "scripts": {
     "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
     "typings": "typings"
   },
   "devDependencies": {
