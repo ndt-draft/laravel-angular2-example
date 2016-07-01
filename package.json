@@ -5,8 +5,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "dev": "webpack",
-    "build": "rimraf resources/assets/dist && webpack --config resources/assets/config/webpack.prod.js --progress --profile --bail",
+    "dev": "webpack && gulp",
+    "build": "rimraf resources/assets/dist && webpack --config resources/assets/config/webpack.prod.js --progress --profile --bail && gulp --production",
     "lint": "tslint ./resources/assets/typescript/**/*.ts -t verbose"
   },
   "devDependencies": {
