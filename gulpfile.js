@@ -13,4 +13,5 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.scripts(['polyfills.js', 'vendor.js', 'app.js'], 'public/js/all.js', 'resources/assets/dist');
+    mix.version(['js/all.js']);
 });

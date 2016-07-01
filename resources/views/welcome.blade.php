@@ -38,6 +38,6 @@
     </head>
     <body>
         <my-app>Loading...</my-app>
-        <script src="js/all.js"></script>
+        <script src="{{ elixir('js/all.js') }}"></script>
     </body>
 </html>
