@@ -1,22 +1,17 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "system",
-        "moduleResolution": "node",
-        "sourceMap": false,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "removeComments": false,
-        "noImplicitAny": true,
-        "outFile": "resources/assets/typescript/dist/main.js"
-    },
-    "exclude": [
-        "node_modules",
-        "resources/vendor",
-        "public/plugins",
-        "vendor"
-    ],
-    "include": [
-        "resources/assets/typescript"
-    ]
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "exclude": [
+    "node_modules",
+    "vendor"
+  ]
 }

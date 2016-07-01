@@ -35,20 +35,9 @@
             }
         </style>
 
-        <!-- 1. Load libraries -->
-         <!-- Polyfill(s) for older browsers -->
-        <script src="plugins/core-js/client/shim.min.js"></script>
-
-        <script src="plugins/zone.js/dist/zone.js"></script>
-        <script src="plugins/reflect-metadata/Reflect.js"></script>
-        <script src="plugins/systemjs/dist/system.src.js"></script>
-        <!-- 2. Configure SystemJS and existing js -->
-        <script src="js/app.js"></script>
-        <script>
-            System.import('main').catch(function(err){ console.error(err); });
-        </script>
     </head>
     <body>
         <my-app>Loading...</my-app>
+        <script src="js/all.js"></script>
     </body>
 </html>
