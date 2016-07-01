@@ -92,7 +92,6 @@ System.register("dashboard", ['@angular/core'], function(exports_2, context_2) {
                 return Dashboard;
             }());
             exports_2("Dashboard", Dashboard);
-            System.import('select2/js');
         }
     }
 });

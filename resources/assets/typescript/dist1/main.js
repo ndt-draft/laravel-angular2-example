@@ -79,7 +79,6 @@ var Dashboard = (function () {
     return Dashboard;
 }());
 exports.Dashboard = Dashboard;
-System.import('select2/js');
 
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {

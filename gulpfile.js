@@ -48,16 +48,21 @@ elixir(function(mix) {
 
     mix.copy( 'bower_components', 'public/plugins' );
 
-    mix.copy( 'resources/assets/js/systemjs.config.js', 'public/js' );
-
-    mix.scripts( [
-        'resources/assets/js/app.js',
-        'resources/assets/js/layout.js'
-    ], 'public/js/app.js', './' );
-
     mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist1/main.js', typescriptOptions[0] );
     // comment out concat of elixir-typescript, uncomment this line and comment the line above
     // mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist2/main.js', typescriptOptions[0] );
 
     mix.typescript( '/**/*.ts', 'resources/assets/typescript/dist3/main.js', typescriptOptions[1] );
+
+    mix.scripts( [
+        'resources/assets/js/systemjs.config.js',
+
+        'bower_components/jquery/dist/jquery.min.js',
+
+        'resources/assets/js/app.js',
+        'resources/assets/js/layout.js',
+
+        'resources/assets/typescript/dist3/main.js'
+    ], 'public/js/app.js', './' );
+
 });

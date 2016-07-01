@@ -10,5 +10,3 @@ export class Dashboard {
     constructor() {
     }
 }
-
-System.import('select2/js');

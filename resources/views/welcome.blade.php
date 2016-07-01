@@ -43,11 +43,9 @@
         <script src="plugins/reflect-metadata/Reflect.js"></script>
         <script src="plugins/systemjs/dist/system.src.js"></script>
         <!-- 2. Configure SystemJS and existing js -->
-        <script src="js/systemjs.config.js"></script>
+        <script src="js/app.js"></script>
         <script>
-            System.import('jquery').catch(function(err){ console.error(err); });
-            System.import('custom-app').catch(function(err){ console.error(err); });
-            System.import('app').catch(function(err){ console.error(err); });
+            System.import('main').catch(function(err){ console.error(err); });
         </script>
     </head>
     <body>
