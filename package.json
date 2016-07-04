@@ -5,7 +5,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "dev": "webpack && gulp",
+    "build-dev": "webpack && gulp",
     "build": "rimraf resources/assets/dist && webpack --config resources/assets/config/webpack.prod.js --progress --profile --bail && gulp --production",
     "lint": "tslint ./resources/assets/typescript/**/*.ts -t verbose"
   },
