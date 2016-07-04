@@ -11,7 +11,9 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['', '.js', '.ts'],
+    // https://webpack.github.io/docs/usage-with-bower.html
+    modulesDirectories: ["node_modules", "bower_components"]
   },
 
   module: {
@@ -19,20 +21,6 @@ module.exports = {
       {
         test: /\.ts$/,
         loader: 'ts'
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
-      },
-      {
-        test: /\.css$/,
-        exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
-      },
-      {
-        test: /\.css$/,
-        include: helpers.root('src', 'app'),
-        loader: 'raw'
       }
     ]
   },
@@ -40,6 +28,10 @@ module.exports = {
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
-    })
+    }),
+
+    new webpack.ResolverPlugin(
+      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin(".bower.json", ["main"])
+    )
   ]
 };

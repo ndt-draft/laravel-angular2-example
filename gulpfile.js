@@ -12,6 +12,16 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.scripts(['polyfills.js', 'vendor.js', 'app.js'], 'public/js/all.js', 'resources/assets/dist');
+    mix.scripts([
+        // JS vendor
+        'bower_components/jquery/dist/jquery.min.js',
+        // JS app
+        'resources/assets/js/app.js',
+        'resources/assets/js/layout.js',
+        // Webpack vendor and app
+        'resources/assets/dist/polyfills.js',
+        'resources/assets/dist/vendor.js',
+        'resources/assets/dist/app.js'
+    ], 'public/js/all.js', './');
     mix.version(['js/all.js']);
 });

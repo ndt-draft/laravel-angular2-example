@@ -1,6 +1,7 @@
 var App = function () {
     var handleHeader = function () {
         console.log('init header');
+        alert('init header');
     };
 
     var handleFooter = function () {

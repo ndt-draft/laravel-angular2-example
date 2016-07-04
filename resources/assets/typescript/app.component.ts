@@ -10,10 +10,11 @@ declare var Layout: any;
 @Component({
     selector: "body",
     templateUrl: "partials/app.html",
-    directives: [MyNgInclude, Dashboard]
+    directives: [MyNgInclude, Dashboard],
+    styles: []
 })
 export class AppComponent { }
 
-// App.initHeader();
-// Layout.initBody();
-// Layout.initBaseLayout();
+App.initHeader();
+Layout.initBody();
+Layout.initBaseLayout();
