@@ -4,8 +4,8 @@ import { MyNgInclude } from "./myNgInclude.component";
 
 import { Dashboard } from "./dashboard";
 
-declare var App: any;
-declare var Layout: any;
+let App = require('../js/app.js');
+let Layout = require('../js/layout.js');
 
 @Component({
     selector: "body",

@@ -1,3 +1,5 @@
+var $ = require('jquery');
+
 var Layout = function () {
     var handleBaseLayout = function () {
         console.log('init base layout');
@@ -15,3 +17,5 @@ var Layout = function () {
         }
     }
 }();
+
+module.exports = Layout;
