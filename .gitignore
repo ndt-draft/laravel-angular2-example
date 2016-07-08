@@ -8,3 +8,5 @@ Homestead.json
 /public/js
 /public/plugins
 /bower_components
+/public/build
+/resources/assets/dist

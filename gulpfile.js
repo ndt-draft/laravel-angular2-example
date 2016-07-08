@@ -11,9 +11,15 @@ var elixir = require('laravel-elixir');
  |
  */
 
+elixir.config.js.browserify.transformers.push({
+    name: 'debowerify',
+    options: {}
+});
+
 elixir(function(mix) {
+    mix.browserify('main.js', 'resources/assets/dist');
     mix.scripts([
-        'resources/assets/dist/custom.js',
+        'resources/assets/dist/main.js',
         'resources/assets/dist/polyfills.js',
         'resources/assets/dist/vendor.js',
         'resources/assets/dist/app.js'
