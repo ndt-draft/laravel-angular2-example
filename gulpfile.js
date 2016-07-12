@@ -17,9 +17,9 @@ elixir.config.js.browserify.transformers.push({
 });
 
 elixir(function(mix) {
-    mix.browserify('main.js', 'resources/assets/dist');
+    // Concat all webpack generated files
     mix.scripts([
-        'resources/assets/dist/main.js',
+        'resources/assets/dist/custom.js',
         'resources/assets/dist/polyfills.js',
         'resources/assets/dist/vendor.js',
         'resources/assets/dist/app.js'

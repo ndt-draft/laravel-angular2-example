@@ -7,7 +7,8 @@ module.exports = {
   entry: {
     'polyfills': './resources/assets/typescript/polyfills.ts',
     'vendor': './resources/assets/typescript/vendor.ts',
-    'app': './resources/assets/typescript/main.ts'
+    'app': './resources/assets/typescript/main.ts',
+    'custom': './resources/assets/js/main.js'
   },
 
   resolve: {
@@ -27,7 +28,7 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor', 'polyfills']
+      name: ['app', 'vendor', 'polyfills', 'custom']
     }),
 
     new webpack.ResolverPlugin(
