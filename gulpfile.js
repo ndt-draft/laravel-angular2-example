@@ -45,6 +45,11 @@ var webpackProdConfig = webpackMerge(webpackCommonConfig, {
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin(),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'ENV': JSON.stringify('production')
+            }
+        })
     ]
 });
 
